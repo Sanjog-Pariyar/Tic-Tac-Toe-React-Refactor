@@ -1,0 +1,27 @@
+:root {
+  --dark-blue: #242038;
+  --light-blue: #2a2f4f;
+  --blue: #35a7ff;
+  --light-pink: #e7cee3;
+  --orange: #ffe74c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+html,
+body {
+  background-color: var(--dark-blue);
+}
+
+body {
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,106 @@
+.grid {
+  display: grid;
+  width: 500px;
+  margin-left: 100px;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: 50px repeat(3, 120px) 40px;
+  grid-gap: 10px;
+}
+
+.turn {
+  align-self: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+}
+
+.animateIcon {
+  font-size: 1.3rem;
+  margin-left: 10px;
+  animation: 0.7s ease-in-out turn-icon-animation;
+}
+
+@keyframes turn-icon-animation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animateText {
+  font-size: 15px;
+  animation: 0.7s ease-in-out turn-text-animation;
+}
+
+@keyframes turn-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+/* Shared Classes */
+
+.hidden {
+  display: none !important;
+}
+
+.border {
+  border: 2px solid lightpink;
+}
+
+.blue {
+  color: var(--blue) !important;
+}
+
+.yellow {
+  color: var(--orange) !important;
+}
+
+.square {
+  background-color: var(--light-blue);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.square:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.shadow {
+  box-shadow: -3px 3px 17px -4px rgba(0, 0, 0, 0.61);
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.score p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#text {
+  font-size: 16px;
+  margin-top: 3px;
+}
