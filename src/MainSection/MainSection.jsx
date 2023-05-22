@@ -75,8 +75,9 @@ function MainSection() {
                     newRound={() => resetGame(true)}
                 />
 
-                {[1,2,3,4,5,6,7,8,9].map((squareId) => {
 
+
+                {[1,2,3,4,5,6,7,8,9].map((squareId) => {
 
                     const existingMove = game.moves.find((move) => move.squareId === squareId)
 
@@ -93,6 +94,8 @@ function MainSection() {
                         </div>
                     )
                 })}
+
+                
 
                 <div className="score shadow" style={{ backgroundColor: "#35a7ff" }}>
                     <p>Player 1:</p>
